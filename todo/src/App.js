@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import * as nums from './numbers'
 
 const value = 100;
 const flag = false;
@@ -23,6 +24,8 @@ function App() {
         {null}
         {false}
         {true}
+        <p>{'count * length = ' + nums.count *  nums.length}</p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
