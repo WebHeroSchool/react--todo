@@ -1,0 +1,21 @@
+body,
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Montserrat-Medium';
+}
+
+.main__title {
+  font-family: 'Montserrat-Extra-Bold';
+  font-size: 25px;
+}
+
+.main__list { align-self: flex-start; }
+
+.main__footer { font-family: 'Montserrat-Bold'; }
