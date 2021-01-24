@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import Input from '../InputItem/InputItem';
 import styles from './App.module.css';
-import '../Fonts.css'
+import '../Fonts/Fonts.css'
 
 const App = () => {
   const todoItems = [
