@@ -11,11 +11,7 @@ body {
   font-family: 'Montserrat-Medium';
 }
 
-.main__title {
+.title {
   font-family: 'Montserrat-Extra-Bold';
   font-size: 25px;
 }
-
-.main__list { align-self: flex-start; }
-
-.main__footer { font-family: 'Montserrat-Bold'; }
