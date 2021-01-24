@@ -8,13 +8,16 @@ import '../Fonts/Fonts.css'
 const App = () => {
   const todoItems = [
     {
-        value: 'first'
+        value: 'first',
+        isDone: false
     },
     {
-        value: 'second'
+        value: 'second',
+        isDone: false
     },
     {
-        value: 'third'
+        value: 'third',
+        isDone: true
     }
   ];
   return (<div className={styles.main}>
