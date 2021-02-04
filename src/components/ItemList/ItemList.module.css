@@ -84,14 +84,14 @@
 
 .trash:hover { opacity: 0.5; }
 
-@media (max-height: 935px) {
+@media (max-height: 935px) and (max-width: 730px) {
   .list {
     height: 65%;
     margin-bottom: 3vh;
   }
 }
 
-@media (max-height: 760px) {
+@media (max-height: 760px) and (max-width: 730px) {
   .list {
     height: 61%;
     margin-bottom: 3vh;
