@@ -1,1 +1,49 @@
-.main { font-family: 'Montserrat-Bold'; }
+.footer,
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.footer { font-size: 14px; }
+
+.left {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.filter { width: 40%; }
+
+.delete { text-align: center; }
+
+.active {
+  color: #9F708B;
+  font-weight: bold;
+}
+
+.filterItem,
+.delete {
+  padding: 3px;
+  margin-left: 15px;
+}
+
+.filterItem:hover,
+.delete:hover {
+  cursor: pointer;
+  border: 2px solid #E6E6E6;
+}
+
+@media (max-width: 700px) {
+  .filterItem {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .filter { width: 0; }
+}
+
+@media (max-width: 550px) {
+  .delete { margin: 0; }
+}

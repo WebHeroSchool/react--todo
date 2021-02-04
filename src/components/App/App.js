@@ -18,13 +18,47 @@ const App = () => {
     {
         value: 'third',
         isDone: true
+    },
+    {
+        value: 'forth',
+        isDone: true
+    },
+    {
+        value: '5th',
+        isDone: true
+    },
+    {
+        value: '6th',
+        isDone: true
+    },
+    {
+        value: '7th',
+        isDone: true
+    },
+    {
+        value: '8th',
+        isDone: true
+    },
+    {
+        value: '9th',
+        isDone: true
+    },
+    {
+        value: '10th',
+        isDone: true
     }
   ];
-  return (<div className={styles.main}>
-    <h1 className={styles.title}>Важные дела</h1>
-    <Input />
-    <ItemList todoItems={todoItems} />
-    <Footer count={todoItems.length} />
+  return (<div>
+    <h1>
+      <p className={styles.subtitle}>TODO</p>
+      <p className={styles.subtitle}>LIST</p>
+    </h1>
+    <main className={styles.main}>
+      <Input />
+      <ItemList todoItems={todoItems} />
+      <hr className={styles.line}/>
+      <Footer count={todoItems.length} />
+    </main>
   </div>);
 }
 
