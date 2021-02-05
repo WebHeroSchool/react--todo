@@ -6,8 +6,8 @@ import styles from './App.module.css';
 import '../Fonts/Fonts.css'
 
 class App extends React.Component {
-  render() {
-    const todoItems = [
+  state = {
+    items: [
       {
           value: 'first',
           isDone: false
@@ -48,7 +48,9 @@ class App extends React.Component {
           value: '10th',
           isDone: true
       }
-    ];
+    ]
+  };
+  render() {
     return (
       <div>
         <h1>
@@ -57,9 +59,9 @@ class App extends React.Component {
         </h1>
         <main className={styles.main}>
           <Input />
-          <ItemList todoItems={todoItems} />
+          <ItemList todoItems={this.state.items} />
           <hr className={styles.line}/>
-          <Footer count={todoItems.length} />
+          <Footer count={this.state.items.length} />
         </main>
     </div>);
   }
