@@ -50,6 +50,9 @@ class App extends React.Component {
       }
     ]
   };
+
+  onClickDone = isDone => console.log(isDone);
+
   render() {
     return (
       <div>
@@ -59,7 +62,7 @@ class App extends React.Component {
         </h1>
         <main className={styles.main}>
           <Input />
-          <ItemList todoItems={this.state.items} />
+          <ItemList todoItems={this.state.items} onClickDone={this.onClickDone} />
           <hr className={styles.line}/>
           <Footer count={this.state.items.length} />
         </main>
