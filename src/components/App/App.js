@@ -82,6 +82,18 @@ class App extends React.Component {
     this.setState({items: newItemList});
   }
 
+  onClickAdd = value => this.setState(state => ({
+    items: [
+      ...state.items,
+      {
+        value: value,
+        isDone: false,
+        id: state.count + 1
+      }
+    ],
+    count: state.count + 1
+  }));
+
   render() {
     return (
       <div>
@@ -90,7 +102,7 @@ class App extends React.Component {
           <p className={styles.subtitle}>LIST</p>
         </h1>
         <main className={styles.main}>
-          <Input />
+          <Input onClickAdd={this.onClickAdd}/>
           <ItemList
             todoItems={this.state.items}
             onClickDone={this.onClickDone}
