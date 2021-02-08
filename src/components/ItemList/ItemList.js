@@ -15,4 +15,12 @@ const ItemList = ({todoItems, onClickDone, onClickDelete}) => (<div className={s
     </div>)}
 </div>);
 
+ItemList.defaultProps = {
+    todoItems: [{
+      value: 'Добавь новую задачу',
+      isDone: false,
+      id: 0
+      }]
+};
+
 export default ItemList;

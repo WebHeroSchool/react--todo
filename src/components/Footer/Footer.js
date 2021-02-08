@@ -12,4 +12,8 @@ const Footer = ({ count }) => (<div className={styles.footer}>
   <div className={styles.delete}>УДАЛИТЬ<br/>ВЫПОЛНЕННЫЕ</div>
 </div>);
 
+Footer.defaultProps = {
+    count: 0
+};
+
 export default Footer;
