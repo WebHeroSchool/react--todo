@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from '../Item/Item';
 import styles from './ItemList.module.css'
+import PropTypes from 'prop-types';
 
 const ItemList = ({todoItems, onClickDone, onClickDelete}) => (<div className={styles.list}>
   {todoItems.map(item =>
@@ -15,12 +16,10 @@ const ItemList = ({todoItems, onClickDone, onClickDelete}) => (<div className={s
     </div>)}
 </div>);
 
-ItemList.defaultProps = {
-    todoItems: [{
-      value: 'Добавь новую задачу',
-      isDone: false,
-      id: 0
-      }]
+ItemList.propTypes = {
+  todoItems: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onClickDone: PropTypes.func.isRequired,
+  onClickDelete: PropTypes.func.isRequired
 };
 
 export default ItemList;

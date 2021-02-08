@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { brown } from '@material-ui/core/colors';
+import PropTypes from 'prop-types';
 
 class InputItem extends React.Component {
   state = {
@@ -61,5 +62,9 @@ const ColorButton = withStyles((theme: Theme) => ({
     },
   },
 }))(Button);
+
+InputItem.propTypes = {
+  onClickAdd: PropTypes.func.isRequired
+};
 
 export default InputItem;

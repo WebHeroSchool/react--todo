@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Item.module.css'
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 const Item = ({todoItems, isDone, onClickDone, id, onClickDelete}) => (
   <div className={styles.wrapper}>
@@ -25,5 +26,13 @@ const Item = ({todoItems, isDone, onClickDone, id, onClickDelete}) => (
     </label>
     <div className={styles.trash} onClick={() => onClickDelete(id)}></div>
 </div>)
+
+Item.propTypes = {
+  todoItems: PropTypes.string.isRequired,
+  isDone: PropTypes.bool.isRequired,
+  onClickDone: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
+  onClickDelete: PropTypes.func.isRequired
+};
 
 export default Item;
